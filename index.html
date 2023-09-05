@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: rgba(180, 7, 160, 0.929); /* Blue background color */
+        }
+
+        #container {
+            background-color: rgb(140, 0, 255); /* Red background color for the container */
+            width: 300px; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 20px; /* Add some padding to the container */
+        }
+
+        #container h1 {
+            color: white; /* White text color for the form title */
+        }
+
+        table {
+            width: 100%;
+            color: white;
+        }
+
+        table td {
+            padding: 5px;
+        }
+
+        /* Style the register button */
+        input[type="submit"] {
+            background-color: white;
+            text-decoration:underline; /* White background color for the button */
+            color:black ; /* Black text color for the button */
+            border: none;
+            padding: 10px 20px; /* Adjust padding as needed */
+            cursor: pointer;
+            /* margin-left: 100px; */
+            padding: 10px 130px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 style="text-align: center;">Registration Form</h1>
+        <form action="submit.php" method="POST">
+            <table>
+                <tr>
+                    <td><label for="fullname">Full Name:</label></td>
+                    <td><input type="text" id="fullname" name="fullname" required></td>
+                </tr>
+                <tr>
+                    <td><label for="username">Username:</label></td>
+                    <td><input type="text" id="username" name="username" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td><label for="repassword">Re-enter Password:</label></td>
+                    <td><input type="password" id="repassword" name="repassword" required></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><textarea id="address" name="address" rows="4" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="age" name="age" required></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other" required>
+                        <label for="other">Other</label><br>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
+
